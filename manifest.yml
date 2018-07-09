@@ -1,0 +1,7 @@
+---
+applications:
+- name: test-pivotal-roh
+  memory: 10MB
+  instances: 1
+  buildpack: https://github.com/cloudfoundry/python-buildpack
+  command: python manage.py collectstatic --noinput && gunicorn test_pivotal.wsgi:application

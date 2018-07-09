@@ -1,0 +1,1 @@
+web: gunicorn test_pivotal.wsgi --workers 1
